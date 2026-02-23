@@ -10,14 +10,13 @@ const translations = JSON.parse(
   fs.readFileSync(path.join(__dirname, "translations.json"), "utf-8")
 );
 
-const GITHUB_BASE =
-  "https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/";
-
 export default function () {
   const allEntries = [];
 
   for (const [lang, langData] of Object.entries(translations)) {
     const flat = [];
+    const base = langData.githubBase ||
+      "https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/";
 
     for (const section of chapters.sections) {
       for (const ch of section.chapters) {
@@ -48,8 +47,7 @@ export default function () {
           sectionTitle: section.title,
           sectionColor: section.color,
           url: `${prefix}/read/${ch.id}/`,
-          githubUrl: `${GITHUB_BASE}${langData.dir}/${encodedFile}`,
-          // URL to switch to the other language for this chapter
+          githubUrl: `${base}${langData.dir}/${encodedFile}`,
           altLangs: [],
         });
       }
