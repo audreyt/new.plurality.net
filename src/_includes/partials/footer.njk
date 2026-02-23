@@ -1,0 +1,20 @@
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__brand" aria-hidden="true">
+      <span class="c-r">P</span><span class="c-o">l</span><span class="c-g">u</span><span class="c-c">r</span><span class="c-w">a</span><span class="c-c">l</span><span class="c-g">i</span><span class="c-o">t</span><span class="c-r">y</span>
+    </div>
+
+    <ul class="footer__links">
+      <li><a href="/read/" class="footer__link">Read</a></li>
+      <li><a href="/endorsements/" class="footer__link">Endorsements</a></li>
+      <li><a href="/about/" class="footer__link">About</a></li>
+      <li><a href="{{ site.github }}" class="footer__link" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="{{ site.discord }}" class="footer__link" target="_blank" rel="noopener">Discord</a></li>
+    </ul>
+
+    <div class="footer__sep"></div>
+
+    <p class="footer__authors">{{ site.authors | join(" & ") }}</p>
+    <p class="footer__license">{{ i18n.en.cc0_notice }}</p>
+  </div>
+</footer>

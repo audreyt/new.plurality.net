@@ -1,0 +1,27 @@
+<nav class="nav{% if navHero %} nav--hero{% endif %}" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Plurality home">Plurality</a>
+
+    <ul class="nav__links">
+      <li><a href="/read/" class="nav__link{% if page.url == '/read/' %} nav__link--active{% endif %}">Read</a></li>
+      <li><a href="/endorsements/" class="nav__link{% if page.url == '/endorsements/' %} nav__link--active{% endif %}">Endorsements</a></li>
+      <li><a href="/about/" class="nav__link{% if page.url == '/about/' %} nav__link--active{% endif %}">About</a></li>
+      <li><a href="{{ site.github }}" class="nav__link" target="_blank" rel="noopener">GitHub</a></li>
+      <li><button class="theme-toggle" aria-label="Toggle theme">&#9790;</button></li>
+    </ul>
+
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav__overlay" role="dialog" aria-label="Mobile menu">
+  <a href="/read/" class="nav__overlay-link">Read</a>
+  <a href="/endorsements/" class="nav__overlay-link">Endorsements</a>
+  <a href="/about/" class="nav__overlay-link">About</a>
+  <a href="{{ site.github }}" class="nav__overlay-link" target="_blank" rel="noopener">GitHub</a>
+  <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+</div>

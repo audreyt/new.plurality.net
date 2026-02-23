@@ -1,0 +1,19 @@
+---
+pagination:
+  data: flatChapters
+  size: 1
+  alias: chapter
+permalink: "{{ chapter.url }}"
+layout: reader.njk
+eleventyComputed:
+  title: "{{ chapter.title }}"
+  chapterLabel: "{{ chapter.sectionTitle }} · {{ chapter.number }}"
+  meta: "By Audrey Tang & E. Glen Weyl"
+  lang: "{{ chapter.lang }}"
+  prevUrl: "{{ chapter.prevChapter.url if chapter.prevChapter else '' }}"
+  prevTitle: "{{ chapter.prevChapter.title if chapter.prevChapter else '' }}"
+  nextUrl: "{{ chapter.nextChapter.url if chapter.nextChapter else '' }}"
+  nextTitle: "{{ chapter.nextChapter.title if chapter.nextChapter else '' }}"
+---
+
+{% fetchcontent chapter.githubUrl %}

@@ -1,0 +1,47 @@
+---
+layout: base.njk
+---
+<div class="reader">
+  {% include "partials/toc.njk" %}
+
+  <article class="reader__content">
+    <header class="reader__header">
+      {% if chapterLabel %}
+        <p class="reader__chapter-label">{{ chapterLabel }}</p>
+      {% endif %}
+      <h1 class="reader__title">{{ title }}</h1>
+      {% if meta %}
+        <p class="reader__meta">{{ meta }}</p>
+      {% endif %}
+      {% if chapter and chapter.altLangs | length %}
+        <nav class="reader__lang-switch" aria-label="Language versions">
+          <span class="reader__lang-current">{{ chapter.langLabel }}</span>
+          {% for alt in chapter.altLangs %}
+            <a href="{{ alt.url }}" class="reader__lang-link" lang="{{ alt.lang }}">{{ alt.label }}</a>
+          {% endfor %}
+        </nav>
+      {% endif %}
+    </header>
+
+    <div class="reader__body">
+      {{ content | safe }}
+    </div>
+
+    {% if prevUrl or nextUrl %}
+    <nav class="reader__nav" aria-label="Chapter navigation">
+      {% if prevUrl %}
+        <a href="{{ prevUrl }}" class="reader__nav-link reader__nav-link--prev">
+          <span class="reader__nav-label">&larr; Previous</span>
+          <span class="reader__nav-title">{{ prevTitle }}</span>
+        </a>
+      {% endif %}
+      {% if nextUrl %}
+        <a href="{{ nextUrl }}" class="reader__nav-link reader__nav-link--next">
+          <span class="reader__nav-label">Next &rarr;</span>
+          <span class="reader__nav-title">{{ nextTitle }}</span>
+        </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </article>
+</div>
