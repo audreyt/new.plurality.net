@@ -50,7 +50,27 @@
   var page = document.getElementById("book-page");
   if (!page) return;
 
-  // Intercept navigation clicks on prev/next links
+  // Animate in on page load if we came from a flip
+  try {
+    var flipDir = sessionStorage.getItem("book-flip-dir");
+    if (flipDir) {
+      sessionStorage.removeItem("book-flip-dir");
+      page.style.opacity = "0";
+      page.style.transform = flipDir === "next"
+        ? "translateX(40px)" : "translateX(-40px)";
+      // Force reflow then animate in
+      page.offsetHeight;
+      page.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+      page.style.opacity = "1";
+      page.style.transform = "translateX(0)";
+      page.addEventListener("transitionend", function () {
+        page.style.transition = "";
+        page.style.transform = "";
+      }, { once: true });
+    }
+  } catch (ex) { /* ignore */ }
+
+  // Intercept nav clicks for exit animation then navigate
   var navLinks = document.querySelectorAll(".book__nav-link[data-page-dir]");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -60,37 +80,28 @@
 
       e.preventDefault();
 
-      // Animate out
-      var outClass = dir === "next" ? "book__page--flip-out-next" : "book__page--flip-out-prev";
-      page.classList.add(outClass);
+      // Scroll to top smoothly
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
-      // Navigate after animation
+      // Animate out
+      page.style.transition = "opacity 0.25s ease, transform 0.25s ease";
+      page.style.opacity = "0";
+      page.style.transform = dir === "next"
+        ? "translateX(-40px)" : "translateX(40px)";
+
+      // Store direction and navigate
+      try {
+        sessionStorage.setItem("book-flip-dir", dir);
+      } catch (ex) { /* ignore */ }
+
       setTimeout(function () {
-        // Store the direction so the incoming page can animate in
-        try {
-          sessionStorage.setItem("book-flip-dir", dir);
-        } catch (ex) { /* ignore */ }
         window.location.href = href;
-      }, 280);
+      }, 250);
     });
   });
 
-  // Animate in on page load if we came from a flip
-  try {
-    var flipDir = sessionStorage.getItem("book-flip-dir");
-    if (flipDir) {
-      sessionStorage.removeItem("book-flip-dir");
-      var inClass = flipDir === "next" ? "book__page--flip-in-next" : "book__page--flip-in-prev";
-      page.classList.add(inClass);
-      page.addEventListener("animationend", function () {
-        page.classList.remove(inClass);
-      }, { once: true });
-    }
-  } catch (ex) { /* ignore */ }
-
   // ── Keyboard navigation: arrow keys for prev/next ──
   document.addEventListener("keydown", function (e) {
-    // Don't trigger if user is typing in an input
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.isContentEditable) return;
 
     var link;

@@ -8,7 +8,7 @@ layout: reader.njk
 eleventyComputed:
   title: "{{ chapter.title }}"
   chapterLabel: "{{ chapter.sectionTitle }} · {{ chapter.number }}"
-  meta: "By Audrey Tang & E. Glen Weyl"
+  meta: ""
   lang: "{{ chapter.lang }}"
   prevUrl: "{{ chapter.prevChapter.url if chapter.prevChapter else '' }}"
   prevTitle: "{{ chapter.prevChapter.title if chapter.prevChapter else '' }}"

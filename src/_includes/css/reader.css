@@ -85,16 +85,38 @@
   margin-bottom: 0;
 }
 
+.book__toc-section {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-top: 14px;
+  margin-bottom: 4px;
+  padding-left: 14px;
+}
+
+.book__toc-section:first-of-type {
+  margin-top: 0;
+}
+
 .book__toc-list a {
   display: block;
-  padding: 5px 0 5px 14px;
+  padding: 3px 0 3px 14px;
   font-family: var(--sans);
-  font-size: 0.82rem;
-  line-height: 1.4;
+  font-size: 0.78rem;
+  line-height: 1.35;
   color: var(--muted);
   text-decoration: none;
   border-left: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+}
+
+.book__toc-num {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  margin-right: 2px;
 }
 
 .book__toc-list a:hover,
@@ -136,92 +158,24 @@
   transition: transform 0.4s var(--ease-out), opacity 0.4s ease;
 }
 
-/* Page curl in corner */
+/* Page curl — subtle corner hint */
 .book__page-curl {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   background: linear-gradient(
     -135deg,
     var(--warm) 0%,
-    var(--warm) 38%,
-    var(--border) 40%,
-    var(--surface) 42%,
+    var(--warm) 42%,
+    var(--border) 44%,
+    var(--surface) 46%,
     var(--surface) 100%
   );
   border-radius: 0 0 6px 0;
   pointer-events: none;
-  opacity: 0.7;
-  transition: opacity 0.3s, width 0.3s, height 0.3s;
-}
-
-.book__page:hover .book__page-curl {
-  opacity: 1;
-  width: 50px;
-  height: 50px;
-}
-
-/* ── Page flip animation states ── */
-.book__page--flip-out-next {
-  animation: pageFlipOutNext 0.35s var(--ease-out) forwards;
-}
-
-.book__page--flip-in-next {
-  animation: pageFlipInNext 0.35s var(--ease-out) forwards;
-}
-
-.book__page--flip-out-prev {
-  animation: pageFlipOutPrev 0.35s var(--ease-out) forwards;
-}
-
-.book__page--flip-in-prev {
-  animation: pageFlipInPrev 0.35s var(--ease-out) forwards;
-}
-
-@keyframes pageFlipOutNext {
-  0% {
-    transform: perspective(1200px) rotateY(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(1200px) rotateY(-15deg) translateX(-30px);
-    opacity: 0;
-  }
-}
-
-@keyframes pageFlipInNext {
-  0% {
-    transform: perspective(1200px) rotateY(15deg) translateX(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: perspective(1200px) rotateY(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes pageFlipOutPrev {
-  0% {
-    transform: perspective(1200px) rotateY(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: perspective(1200px) rotateY(15deg) translateX(30px);
-    opacity: 0;
-  }
-}
-
-@keyframes pageFlipInPrev {
-  0% {
-    transform: perspective(1200px) rotateY(-15deg) translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: perspective(1200px) rotateY(0deg);
-    opacity: 1;
-  }
+  opacity: 0.5;
 }
 
 /* ── Chapter Header ── */
@@ -553,7 +507,8 @@
   }
 
   .book__page-curl {
-    display: none;
+    width: 16px;
+    height: 16px;
   }
 }
 
