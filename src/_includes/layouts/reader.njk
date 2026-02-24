@@ -14,7 +14,7 @@ layout: base.njk
     <nav class="book__toc-nav" id="toc-nav">
       <p class="book__toc-heading">{{ i18n[tocLang].toc or "Contents" }}</p>
       {% for section in chapters.sections %}
-        <p class="book__toc-section">{{ section.title }}</p>
+        <p class="book__toc-section">{% if i18n[tocLang].sections %}{{ i18n[tocLang].sections[section.title] or section.title }}{% else %}{{ section.title }}{% endif %}</p>
         <ul class="book__toc-list">
           {% for ch in section.chapters %}
             {% set chTitle = ch.title %}

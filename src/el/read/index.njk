@@ -19,7 +19,7 @@ permalink: /el/read/
       <div class="chapter-group reveal">
         <h3 class="chapter-group__title">
           <span class="chapter-group__accent" style="background:{{ section.color }}"></span>
-          {{ section.title }}
+          {{ i18n.el.sections[section.title] or section.title }}
         </h3>
         <div class="chapter-list">
           {% for ch in section.chapters %}

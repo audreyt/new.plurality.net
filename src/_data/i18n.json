@@ -73,7 +73,17 @@
     "cc0_notice": "本作品以 CC0 授權條款貫徹自由開放精神。",
     "prev_chapter": "上一章",
     "next_chapter": "下一章",
-    "toc": "目錄"
+    "toc": "目錄",
+    "sections": {
+      "Before You Read": "導讀",
+      "Preface": "序言",
+      "Information Technology and Democracy": "資訊技術與民主",
+      "Plurality": "多元宇宙",
+      "Freedom": "自由",
+      "Democracy": "民主",
+      "Impact": "影響",
+      "Forward": "展望"
+    }
   },
   "ja": {
     "lang_name": "日本語",
@@ -111,7 +121,17 @@
     "cc0_notice": "この作品はCC0の下でパブリックドメインに捧げられています。",
     "prev_chapter": "前の章",
     "next_chapter": "次の章",
-    "toc": "目次"
+    "toc": "目次",
+    "sections": {
+      "Before You Read": "読む前に",
+      "Preface": "序文",
+      "Information Technology and Democracy": "情報技術と民主主義",
+      "Plurality": "プルラリティ",
+      "Freedom": "自由",
+      "Democracy": "民主主義",
+      "Impact": "インパクト",
+      "Forward": "未来へ"
+    }
   },
   "th": {
     "lang_name": "ไทย",
@@ -149,7 +169,17 @@
     "cc0_notice": "งานนี้อุทิศให้สาธารณะภายใต้ CC0",
     "prev_chapter": "บทก่อนหน้า",
     "next_chapter": "บทถัดไป",
-    "toc": "สารบัญ"
+    "toc": "สารบัญ",
+    "sections": {
+      "Before You Read": "ก่อนอ่าน",
+      "Preface": "คำนำ",
+      "Information Technology and Democracy": "เทคโนโลยีสารสนเทศและประชาธิปไตย",
+      "Plurality": "พหุนิยม",
+      "Freedom": "เสรีภาพ",
+      "Democracy": "ประชาธิปไตย",
+      "Impact": "ผลกระทบ",
+      "Forward": "ก้าวไปข้างหน้า"
+    }
   },
   "el": {
     "lang_name": "Ελληνικά",
@@ -187,6 +217,16 @@
     "cc0_notice": "Αυτό το έργο αφιερώνεται στο δημόσιο τομέα υπό CC0.",
     "prev_chapter": "Προηγούμενο",
     "next_chapter": "Επόμενο",
-    "toc": "Πίνακας περιεχομένων"
+    "toc": "Πίνακας περιεχομένων",
+    "sections": {
+      "Before You Read": "Πριν Διαβάσετε",
+      "Preface": "Πρόλογος",
+      "Information Technology and Democracy": "Τεχνολογία Πληροφοριών και Δημοκρατία",
+      "Plurality": "Πληθυντικότητα",
+      "Freedom": "Ελευθερία",
+      "Democracy": "Δημοκρατία",
+      "Impact": "Αντίκτυπος",
+      "Forward": "Μπροστά"
+    }
   }
 }

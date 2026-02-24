@@ -25,10 +25,11 @@ eleventyComputed:
     </blockquote>
   {% endfor %}
 {% elif chapter.localCredits %}
-  <p class="credits__intro">{{ credits.intro }}</p>
+  {% set cl = credits.i18n[chapter.lang] or credits.i18n.en %}
+  <p class="credits__intro">{{ cl.intro }}</p>
   {% for cat in credits.categories %}
     <div class="credits__category">
-      <h3 class="credits__category-name">{{ cat.name }}</h3>
+      <h3 class="credits__category-name">{{ cl.categories[cat.name] or cat.name }}</h3>
       <ul class="credits__list">
         {% for person in cat.contributors %}
           <li class="credits__name" style="font-size: {{ (person.pt / 12) | round(3) }}rem">{{ person.name }}</li>

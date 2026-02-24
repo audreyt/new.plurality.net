@@ -12,6 +12,9 @@ const translations = JSON.parse(
 const endorsements = JSON.parse(
   fs.readFileSync(path.join(__dirname, "endorsements.json"), "utf-8")
 );
+const i18n = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "i18n.json"), "utf-8")
+);
 
 export default function () {
   const allEntries = [];
@@ -56,7 +59,7 @@ export default function () {
           langLabel: langData.label,
           file: file,
           sectionId: section.id,
-          sectionTitle: section.title,
+          sectionTitle: (i18n[lang] && i18n[lang].sections && i18n[lang].sections[section.title]) || section.title,
           sectionColor: section.color,
           url: `${prefix}/read/${ch.id}/`,
           githubUrl: `${base}${langData.dir}/${encodedFile}`,

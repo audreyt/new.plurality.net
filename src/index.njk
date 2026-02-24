@@ -112,7 +112,7 @@ permalink: "{% if pageLang == 'en' %}/{% else %}/{{ pageLang }}/{% endif %}"
         <div class="chapter-group reveal">
           <h3 class="chapter-group__title">
             <span class="chapter-group__accent" style="background:{{ section.color }}"></span>
-            {{ section.title }}
+            {% if t.sections %}{{ t.sections[section.title] or section.title }}{% else %}{{ section.title }}{% endif %}
           </h3>
           <div class="chapter-list">
             {% for ch in section.chapters %}
