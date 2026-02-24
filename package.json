@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
+  "license": "CC0-1.0",
   "scripts": {
     "dev": "bunx @11ty/eleventy --serve",
     "build": "bunx @11ty/eleventy",

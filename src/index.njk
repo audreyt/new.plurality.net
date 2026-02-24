@@ -135,9 +135,11 @@ permalink: "{% if pageLang == 'en' %}/{% else %}/{{ pageLang }}/{% endif %}"
   </div>
 </section>
 
+{# ═══════ ENDORSEMENTS (only if language has 0-0 chapter) ═══════ #}
+{% set hasEndorsements = (pageLang == "en") or (translations[pageLang] and translations[pageLang].files["0-0"]) %}
+{% if hasEndorsements %}
 <div class="gold-sep"></div>
 
-{# ═══════ ENDORSEMENTS ═══════ #}
 <section class="endorsements-section section">
   <div class="content-wrap">
     <p class="section-label reveal">{{ t.section_endorsements }}</p>
@@ -161,6 +163,7 @@ permalink: "{% if pageLang == 'en' %}/{% else %}/{{ pageLang }}/{% endif %}"
     </div>
   </div>
 </section>
+{% endif %}
 
 <div class="gold-sep"></div>
 

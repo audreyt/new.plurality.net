@@ -1,15 +1,27 @@
 # new.plurality.net
 
-To install dependencies:
+The website for [Plurality: The Future of Collaborative Technology and Democracy](https://new.plurality.net), a book by E. Glen Weyl, Audrey Tang and the Plurality Community.
+
+Built with [Eleventy](https://www.11ty.dev/) and [Bun](https://bun.sh/).
+
+## Setup
 
 ```bash
 bun install
 ```
 
-To run:
+## Development
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.3.3. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Build
+
+```bash
+bun run build
+```
+
+## License
+
+This work is marked with [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
