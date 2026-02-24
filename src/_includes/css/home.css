@@ -245,6 +245,20 @@
   gap: 12px;
 }
 
+.get-book__extra {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.get-book__extra-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
   .get-book {
     flex-direction: column;

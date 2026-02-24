@@ -119,6 +119,21 @@
     "join_discord": "Discordに参加",
     "start_reading": "読み始める",
     "cc0_notice": "この作品はCC0の下でパブリックドメインに捧げられています。",
+    "pdf_url": "https://github.com/akinorioyama/plurality_tentative/releases/download/latest/PLURALITY_Japanese.pdf",
+    "buy_url": "https://cybozushiki.cybozu.co.jp/books/plurality/#onlineshop",
+    "buy_label": "ネット書店で購入",
+    "extra_resources": [
+      {
+        "desc": "日本語版出版プロジェクトの特設サイトでは日本語版刊行に向けてのメッセージを記載しています。",
+        "url": "https://cybozushiki.cybozu.co.jp/books/plurality/",
+        "label": "特設サイト"
+      },
+      {
+        "desc": "日本語話者にとってわかりやすいように関連トピックの紹介、用語解説、雑談などが行われています。",
+        "url": "https://scrapbox.io/plurality-japanese/%E5%88%9D%E3%82%81%E3%81%AB%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AD",
+        "label": "読者用フォーラム"
+      }
+    ],
     "prev_chapter": "前の章",
     "next_chapter": "次の章",
     "toc": "目次",

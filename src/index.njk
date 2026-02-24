@@ -91,9 +91,23 @@ permalink: "{% if pageLang == 'en' %}/{% else %}/{{ pageLang }}/{% endif %}"
         <p>{{ t.get_book_desc }}</p>
         <div class="get-book__links">
           <a href="{{ readPrefix }}/read/1/" class="involved-link">{{ t.read_online }} &rarr;</a>
-          <a href="https://github.com/pluralitybook/plurality/releases" class="involved-link" target="_blank" rel="noopener">{{ t.download_pdf }} &rarr;</a>
-          <a href="https://www.amazon.com/dp/B0DSHVHMF2" class="involved-link" target="_blank" rel="noopener">{{ t.buy_amazon }} &rarr;</a>
+          <a href="{{ t.pdf_url or 'https://github.com/pluralitybook/plurality/releases' }}" class="involved-link" target="_blank" rel="noopener">{{ t.download_pdf }} &rarr;</a>
+          {% if t.buy_url %}
+            <a href="{{ t.buy_url }}" class="involved-link" target="_blank" rel="noopener">{{ t.buy_label }} &rarr;</a>
+          {% else %}
+            <a href="https://www.amazon.com/dp/B0DSHVHMF2" class="involved-link" target="_blank" rel="noopener">{{ t.buy_amazon }} &rarr;</a>
+          {% endif %}
         </div>
+        {% if t.extra_resources %}
+        <div class="get-book__extra">
+          {% for res in t.extra_resources %}
+          <div class="get-book__extra-item">
+            <p>{{ res.desc }}</p>
+            <a href="{{ res.url }}" class="involved-link" target="_blank" rel="noopener">{{ res.label }} &rarr;</a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
