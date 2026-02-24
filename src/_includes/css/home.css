@@ -63,7 +63,7 @@
 }
 
 .hero__title {
-  font-family: var(--serif);
+  font-family: var(--display-serif);
   font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 400;
   line-height: 1.05;
@@ -374,7 +374,7 @@
 
 .chapter-card__number {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display-serif);
   font-size: 2rem;
   font-weight: 300;
   color: var(--gold);
@@ -420,7 +420,7 @@
 }
 
 .endorsement-card__quote-mark {
-  font-family: var(--serif);
+  font-family: var(--display-serif);
   font-size: 4rem;
   line-height: 1;
   color: var(--gold-light);

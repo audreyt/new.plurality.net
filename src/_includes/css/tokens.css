@@ -8,8 +8,8 @@
   --paper: #faf8f5;
   --warm: #f4f1ec;
   --surface: #ffffff;
-  --text: #2c3e50;
-  --muted: #5f6a7d;
+  --text: #1a2a3a;
+  --muted: #4a5568;
   --heading: #0f1923;
   --gold: #7d6430;
   --gold-light: #c9a961;
@@ -24,7 +24,8 @@
   --plurality-white: #FFFFFF;
 
   /* Typography */
-  --serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  --serif: 'Lora', 'Noto Serif TC', Georgia, serif;
+  --display-serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
   --sans: 'Outfit', 'Noto Sans TC', system-ui, sans-serif;
 
   /* Spacing */
@@ -75,8 +76,8 @@
   --paper: #111820;
   --warm: #161e28;
   --surface: #1c2535;
-  --text: #b8b4ac;
-  --muted: #8a96a8;
+  --text: #d4d0c8;
+  --muted: #9ca8b8;
   --heading: #e8e4dc;
   --gold: #c9a961;
   --gold-light: #ddc07a;

@@ -47,7 +47,7 @@ body {
 
 /* ---- Typography ---- */
 h1, h2, h3, h4 {
-  font-family: var(--serif);
+  font-family: var(--display-serif);
   color: var(--heading);
   font-weight: 400;
   line-height: 1.25;
@@ -147,7 +147,8 @@ html[lang="th"] {
 }
 
 html[lang="el"] {
-  --serif: 'Cormorant Garamond', 'GFS Didot', Georgia, serif;
+  --serif: 'Lora', 'GFS Didot', Georgia, serif;
+  --display-serif: 'Cormorant Garamond', 'GFS Didot', Georgia, serif;
 }
 
 /* ---- Section label pattern ---- */
