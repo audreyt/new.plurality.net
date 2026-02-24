@@ -25,7 +25,10 @@
   function updateButtons(theme) {
     var btns = document.querySelectorAll(".theme-toggle");
     btns.forEach(function (btn) {
-      btn.textContent = theme === "dark" ? "\u263C" : "\u263E";
+      var moon = btn.querySelector(".theme-icon--moon");
+      var sun = btn.querySelector(".theme-icon--sun");
+      if (moon) moon.style.display = theme === "dark" ? "none" : "";
+      if (sun) sun.style.display = theme === "dark" ? "" : "none";
       btn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
     });
   }
