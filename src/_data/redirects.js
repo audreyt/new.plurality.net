@@ -18,7 +18,7 @@ const langMap = {
   gre: "/el",
   // "en" also appears for chapter 1 on old site
   en: "",
-  de: "",  // German falls back to English (no German translation in new site)
+  de: "/de",
 };
 
 export default function () {
