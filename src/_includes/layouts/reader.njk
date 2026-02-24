@@ -33,7 +33,7 @@ layout: base.njk
   </aside>
 
   {# ── Book page ── #}
-  <article class="book__page" id="book-page">
+  <article class="book__page" id="book-page" data-pagefind-meta="section:{{ chapterLabel }}" data-pagefind-filter="lang:{{ lang or 'en' }}">
     {# Page curl decoration #}
     <div class="book__page-curl" aria-hidden="true"></div>
 
@@ -60,7 +60,7 @@ layout: base.njk
     </header>
 
     {# Chapter body #}
-    <div class="book__body{% if chapter and chapter.id == '0-0' %} book__body--endorsements{% endif %}{% if chapter and chapter.id == '0-3' %} book__body--credits{% endif %}">
+    <div class="book__body{% if chapter and chapter.id == '0-0' %} book__body--endorsements{% endif %}{% if chapter and chapter.id == '0-3' %} book__body--credits{% endif %}" data-pagefind-body>
       {{ content | safe }}
     </div>
 

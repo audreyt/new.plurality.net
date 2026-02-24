@@ -6,7 +6,7 @@
   "license": "CC0-1.0",
   "scripts": {
     "dev": "bunx @11ty/eleventy --serve",
-    "build": "bunx @11ty/eleventy",
+    "build": "bunx @11ty/eleventy && bunx pagefind --site dist",
     "clean": "rm -rf dist"
   },
   "dependencies": {
@@ -15,5 +15,8 @@
     "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0"
   }
 }

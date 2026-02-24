@@ -11,6 +11,7 @@
       <li><a href="{{ navPrefix }}/read/" class="nav__link{% if '/read/' in page.url %} nav__link--active{% endif %}">{{ nt.nav_read }}</a></li>
       <li><a href="{{ navPrefix }}/read/0-1/" class="nav__link{% if '/0-1/' in page.url %} nav__link--active{% endif %}">{{ nt.nav_about }}</a></li>
       <li><a href="{{ site.github }}" class="nav__link" target="_blank" rel="noopener">GitHub</a></li>
+      <li><button class="search-toggle" aria-label="Search" id="search-toggle">&#9906;</button></li>
       <li><button class="theme-toggle" aria-label="Toggle theme">&#9790;</button></li>
     </ul>
 
@@ -26,5 +27,13 @@
   <a href="{{ navPrefix }}/read/" class="nav__overlay-link">{{ nt.nav_read }}</a>
   <a href="{{ navPrefix }}/read/0-1/" class="nav__overlay-link">{{ nt.nav_about }}</a>
   <a href="{{ site.github }}" class="nav__overlay-link" target="_blank" rel="noopener">GitHub</a>
+  <button class="search-toggle" aria-label="Search" id="search-toggle-mobile">&#9906;</button>
   <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+</div>
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-label="Search" aria-hidden="true">
+  <div class="search-overlay__inner">
+    <button class="search-overlay__close" id="search-close" aria-label="Close search">&times;</button>
+    <div id="search-container"></div>
+  </div>
 </div>

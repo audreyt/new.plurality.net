@@ -29,11 +29,13 @@
 .nav--hero .nav__logo,
 .nav--hero .nav__link,
 .nav--hero .theme-toggle,
+.nav--hero .search-toggle,
 .nav--hero .nav__hamburger span {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.nav--hero .theme-toggle {
+.nav--hero .theme-toggle,
+.nav--hero .search-toggle {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -49,11 +51,13 @@
 
 .nav--hero.scrolled .nav__logo,
 .nav--hero.scrolled .nav__link,
-.nav--hero.scrolled .theme-toggle {
+.nav--hero.scrolled .theme-toggle,
+.nav--hero.scrolled .search-toggle {
   color: var(--text);
 }
 
-.nav--hero.scrolled .theme-toggle {
+.nav--hero.scrolled .theme-toggle,
+.nav--hero.scrolled .search-toggle {
   border-color: var(--border);
 }
 
