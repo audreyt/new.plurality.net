@@ -132,6 +132,7 @@
   max-width: var(--reading-max);
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 
   /* Book "page" styling */
   background: var(--surface);
@@ -275,6 +276,8 @@
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Drop cap on first paragraph */
@@ -362,6 +365,8 @@
   border: 1px solid var(--border);
   margin: 2em auto;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .book__body ul, .book__body ol {
