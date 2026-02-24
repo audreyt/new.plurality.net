@@ -39,7 +39,10 @@
     "cc0_notice": "This work is dedicated to the public domain under CC0.",
     "prev_chapter": "Previous",
     "next_chapter": "Next",
-    "toc": "Table of Contents"
+    "toc": "Table of Contents",
+    "translation_in_progress": "This chapter is being translated. You can help by contributing to the translation effort.",
+    "read_english": "Read in English",
+    "help_translate": "Help translate"
   },
   "zh": {
     "lang_name": "華文",
@@ -82,6 +85,9 @@
     "prev_chapter": "上一章",
     "next_chapter": "下一章",
     "toc": "目錄",
+    "translation_in_progress": "本章正在翻譯中。歡迎您參與翻譯工作。",
+    "read_english": "閱讀英文版",
+    "help_translate": "協助翻譯",
     "sections": {
       "Before You Read": "導讀",
       "Preface": "序言",
@@ -146,6 +152,9 @@
     "prev_chapter": "前の章",
     "next_chapter": "次の章",
     "toc": "目次",
+    "translation_in_progress": "この章は翻訳中です。翻訳にご協力いただけます。",
+    "read_english": "英語版を読む",
+    "help_translate": "翻訳を手伝う",
     "sections": {
       "Before You Read": "読む前に",
       "Preface": "序文",
@@ -198,6 +207,9 @@
     "prev_chapter": "บทก่อนหน้า",
     "next_chapter": "บทถัดไป",
     "toc": "สารบัญ",
+    "translation_in_progress": "บทนี้กำลังแปลอยู่ คุณสามารถช่วยแปลได้",
+    "read_english": "อ่านเป็นภาษาอังกฤษ",
+    "help_translate": "ช่วยแปล",
     "sections": {
       "Before You Read": "ก่อนอ่าน",
       "Preface": "คำนำ",
@@ -250,6 +262,9 @@
     "prev_chapter": "Προηγούμενο",
     "next_chapter": "Επόμενο",
     "toc": "Πίνακας περιεχομένων",
+    "translation_in_progress": "Αυτό το κεφάλαιο μεταφράζεται. Μπορείτε να βοηθήσετε συνεισφέροντας στη μεταφραστική προσπάθεια.",
+    "read_english": "Διαβάστε στα Αγγλικά",
+    "help_translate": "Βοηθήστε στη μετάφραση",
     "sections": {
       "Before You Read": "Πριν Διαβάσετε",
       "Preface": "Πρόλογος",
@@ -302,6 +317,9 @@
     "prev_chapter": "Zurück",
     "next_chapter": "Weiter",
     "toc": "Inhaltsverzeichnis",
+    "translation_in_progress": "Dieses Kapitel wird gerade übersetzt. Sie können zur Übersetzung beitragen.",
+    "read_english": "Auf Englisch lesen",
+    "help_translate": "Bei der Übersetzung helfen",
     "sections": {
       "Before You Read": "Einführung",
       "Preface": "Vorwort",

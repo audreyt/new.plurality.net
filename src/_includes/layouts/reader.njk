@@ -18,11 +18,14 @@ layout: base.njk
         <ul class="book__toc-list">
           {% for ch in section.chapters %}
             {% set chTitle = ch.title %}
+            {% set chUntranslated = false %}
             {% if tocLang != "en" and translations[tocLang] and translations[tocLang].files[ch.id] %}
               {% set chTitle = translations[tocLang].files[ch.id].title %}
+            {% elif tocLang != "en" %}
+              {% set chUntranslated = true %}
             {% endif %}
             <li>
-              <a href="{{ tocPrefix }}/read/{{ ch.id }}/"{% if chapter and chapter.id == ch.id %} class="active"{% endif %}>
+              <a href="{{ tocPrefix }}/read/{{ ch.id }}/" class="{% if chapter and chapter.id == ch.id %}active{% endif %}{% if chUntranslated %} book__toc-untranslated{% endif %}">
                 <span class="book__toc-num">{{ ch.number }}</span> {{ chTitle }}
               </a>
             </li>

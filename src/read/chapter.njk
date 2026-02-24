@@ -16,7 +16,15 @@ eleventyComputed:
   nextTitle: "{{ chapter.nextChapter.title if chapter.nextChapter else '' }}"
 ---
 
-{% if chapter.id == "0-0" and chapter.localEndorsements %}
+{% if chapter.untranslated %}
+  <div class="book__untranslated">
+    <p>{{ i18n[chapter.lang].translation_in_progress or "This chapter is being translated. You can help by contributing to the translation effort." }}</p>
+    <p><a href="/read/{{ chapter.id }}/">{{ i18n[chapter.lang].read_english or "Read in English" }} &rarr;</a></p>
+    {% if translations[chapter.lang].contributeUrl %}
+      <p><a href="{{ translations[chapter.lang].contributeUrl }}">{{ i18n[chapter.lang].help_translate or "Help translate" }} &rarr;</a></p>
+    {% endif %}
+  </div>
+{% elif chapter.id == "0-0" and chapter.localEndorsements %}
   {% set langEndorsements = endorsements[chapter.lang] %}
   {% for item in langEndorsements %}
     <blockquote>

@@ -125,6 +125,11 @@
   border-left-color: var(--teal);
 }
 
+.book__toc-list a.book__toc-untranslated {
+  opacity: 0.45;
+  font-style: italic;
+}
+
 /* ── The Book Page ── */
 .book__page {
   flex: 1;
@@ -539,6 +544,26 @@
   color: var(--muted);
   letter-spacing: 0.05em;
   opacity: 0.6;
+}
+
+/* ── Untranslated chapter placeholder ── */
+.book__untranslated {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--muted);
+  font-family: var(--sans);
+}
+
+.book__untranslated p {
+  margin: 0.8em 0;
+  text-indent: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.book__untranslated a {
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* ── Responsive ── */

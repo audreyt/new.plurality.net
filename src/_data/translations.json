@@ -53,6 +53,7 @@
     "label": "日本語",
     "prefix": "/ja",
     "githubBase": "https://raw.githubusercontent.com/nishio/plurality-japanese/japanese/contents/",
+    "contributeUrl": "https://github.com/nishio/plurality-japanese",
     "files": {
       "0-0": { "file": "0-0-endorsements", "title": "推薦" },
       "0-1": { "file": "0-1-著者紹介", "title": "著者紹介" },
@@ -95,6 +96,7 @@
     "label": "ไทย",
     "prefix": "/th",
     "githubBase": "https://raw.githubusercontent.com/chusanap/plurality-thai/main/contents/",
+    "contributeUrl": "https://github.com/chusanap/plurality-thai",
     "files": {
       "0-0": { "file": "0-0-คำรับรอง", "title": "คำรับรอง" },
       "0-1": { "file": "0-1-เกี่ยวกับผู้เขียน", "title": "เกี่ยวกับผู้เขียน" },
@@ -137,6 +139,7 @@
     "label": "Ελληνικά",
     "prefix": "/el",
     "githubBase": "https://raw.githubusercontent.com/KenonAlpha/plurality-greek/main/contents/",
+    "contributeUrl": "https://github.com/KenonAlpha/plurality-greek",
     "files": {
       "0-0": { "file": "0-0-endorsements", "title": "Συστάσεις" },
       "0-1": { "file": "0-1-About-the-authors", "title": "Σχετικά με τους Συγγραφείς" },
@@ -150,6 +153,7 @@
     "label": "Deutsch",
     "prefix": "/de",
     "githubBase": "https://raw.githubusercontent.com/GermanPluralityBook/pluralitaet/main/contents/",
+    "contributeUrl": "https://github.com/GermanPluralityBook/pluralitaet",
     "files": {
       "0-0": { "file": "00-00 Stimmen zum Buch", "title": "Stimmen zum Buch" },
       "0-1": { "file": "00-01 Über die Autoren", "title": "Über die Autoren" },

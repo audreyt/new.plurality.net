@@ -29,6 +29,11 @@ permalink: /el/read/
                 <span class="chapter-card__number">{{ ch.number }}</span>
                 <span class="chapter-card__title">{{ trData.title }}</span>
               </a>
+            {% else %}
+              <a href="/el/read/{{ ch.id }}/" class="chapter-card chapter-card--untranslated reveal" style="border-top-color:{{ section.color }}">
+                <span class="chapter-card__number">{{ ch.number }}</span>
+                <span class="chapter-card__title">{{ ch.title }}</span>
+              </a>
             {% endif %}
           {% endfor %}
         </div>

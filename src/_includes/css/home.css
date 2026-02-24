@@ -500,6 +500,10 @@
   margin-bottom: 8px;
 }
 
+.chapter-card--untranslated {
+  opacity: 0.45;
+}
+
 .chapter-card__langs {
   display: block;
   font-family: var(--sans);

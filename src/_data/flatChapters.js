@@ -27,15 +27,21 @@ export default function () {
     for (const section of chapters.sections) {
       for (const ch of section.chapters) {
         // For non-English languages, get the translated file and title
-        let file, title;
+        let file, title, untranslated = false;
         if (lang === "en") {
           file = ch.file;
           title = ch.title;
         } else {
           const override = langData.files[ch.id];
-          if (!override) continue; // skip chapters not available in this language
-          file = override.file;
-          title = override.title;
+          if (!override) {
+            // Generate a placeholder page for untranslated chapters
+            file = ch.file;
+            title = ch.title;
+            untranslated = true;
+          } else {
+            file = override.file;
+            title = override.title;
+          }
         }
 
         const encodedFile = encodeURIComponent(file + ".md");
@@ -65,6 +71,7 @@ export default function () {
           githubUrl: `${base}${langData.dir}/${encodedFile}`,
           localEndorsements: localEndorsements,
           localCredits: localCredits,
+          untranslated: untranslated,
           altLangs: [],
         });
       }
